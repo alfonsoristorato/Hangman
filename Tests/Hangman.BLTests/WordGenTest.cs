@@ -11,7 +11,7 @@ namespace Hangman.BLTests
         public void WordGeneratedIsRandomDespiteTestPassingSometimes()
         {
             //Arrange
-            WordGen wordGen = new WordGen
+            HandleWord wordGen = new HandleWord
             {
                 SecretWord = "alfo"
             };
@@ -19,7 +19,7 @@ namespace Hangman.BLTests
 
 
             //Act
-            string actual = wordGen.SecretWord;
+            string actual = HandleWord.SecretWord;
             //Assert
             Assert.AreNotEqual(expected, actual);
         }

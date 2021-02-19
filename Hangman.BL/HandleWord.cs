@@ -8,46 +8,49 @@ namespace Hangman.BL
 {
     public class HandleWord 
     {
+        public HandleWord()
+        {
+
+        }
 
         public static string[] Words = { "OXYGEN", "THUNDER", "STORM", "NORTHERN LIGHTS", "GREAT BARRIER REEF" };
-        private static string _secretWord;
+        static readonly List<string> WordsList = new List<string>(Words);
 
-        public static string SecretWord
+        static Random randWord = new Random();
+        public string chosenWord = SecretWord();
+        //public static StringBuilder hiddenWord = DisplayToPlayer();
+
+        public static string SecretWord()
         {
-            get
-            {
-                Random randWord = new Random();
-                int randWordNumb = randWord.Next(Words.Length);
-                return Words[randWordNumb];
-               
-            }
-            set { _secretWord = value; }
+            if (WordsList.Count < 1)
+                return "There are no more new words!! :(";
+
+            int randWordNumb = randWord.Next(0, WordsList.Count);
+            string secretWord = WordsList[randWordNumb];
+            WordsList.RemoveAt(randWordNumb);
+
+            return secretWord;
+
         }
-        public static string chosenWord = SecretWord;
-        public static StringBuilder hiddenWord = DisplayToPlayer();
 
-        private StringBuilder _displayToPlayer;
-
-        public static StringBuilder DisplayToPlayer()
+        public StringBuilder DisplayToPlayer()
         {
             StringBuilder displayToPlayer = new StringBuilder(chosenWord.Length);
             for (int i = 0; i < chosenWord.Length; i++)
             {
-                displayToPlayer.Append("*");
+                if (chosenWord == "There are no more new words!! :(")
+                {
+                    displayToPlayer.Append(chosenWord);
+                    break;
+                }
+                displayToPlayer.Append("_");
                 if (chosenWord[i].Equals(' '))
                 {
                     displayToPlayer[i] = chosenWord[i];
                 }
-                
 
             }
-            return displayToPlayer;
-            
-        }
-
-
-
-
-
+            return displayToPlayer;            
+        }    
     }
 }

@@ -60,31 +60,13 @@ namespace Hangman.WebForm
         protected global::System.Web.UI.WebControls.Label PlayingWord;
 
         /// <summary>
-        /// ErrorText control.
+        /// HintText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorText;
-
-        /// <summary>
-        /// IncorrectGuessesBoxTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IncorrectGuessesBoxTitle;
-
-        /// <summary>
-        /// IncorrectGuessesBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IncorrectGuessesBox;
+        protected global::System.Web.UI.WebControls.Label HintText;
 
         /// <summary>
         /// LivesCounterTitle control.
@@ -103,6 +85,33 @@ namespace Hangman.WebForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LivesCounter;
+
+        /// <summary>
+        /// hangmanImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image hangmanImage;
+
+        /// <summary>
+        /// IncorrectGuessesBoxTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label IncorrectGuessesBoxTitle;
+
+        /// <summary>
+        /// IncorrectGuessesBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox IncorrectGuessesBox;
 
         /// <summary>
         /// HintButton control.
