@@ -85,6 +85,10 @@ textarea {
         font-size: 22px !important;
         text-align: right !important;
     }
+    .navbar-dark .navbar-toggle {
+        border-color: transparent !important;
+        color: transparent;
+    }
 
     .navbar a:hover {
         color: #ad2fcb !important;
@@ -97,10 +101,22 @@ textarea {
         font-size: 30px;
         width: 50px;
         height: 8.5px;
-        margin-top:10px;
+        margin-top: 10px;
         margin-bottom: 11px;
         border-radius: 2px;
+    }
 
+    .navbar-toggle {
+        position: relative;
+        float: right;
+        padding: 0px 10px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
     }
 /*
     #DivPlayingWord {
@@ -131,7 +147,7 @@ textarea {
     }
 
     .navbar a {
-        padding-top: 38px !important;
+        padding-top: 28px !important;
     }
 
     .navbar {
