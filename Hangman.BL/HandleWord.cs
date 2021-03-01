@@ -14,6 +14,8 @@ namespace Hangman.BL
         }
 
         public static string[] Words = { "OXYGEN", "THUNDER", "STORM", "NORTHERN LIGHTS", "GREAT BARRIER REEF" };
+        //public static string[] Words1 = { "OXYGEN", "THUNDER", "STORM", "NORTHERN LIGHTS", "GREAT BARRIER REEF" };
+        //public static string[] Words2 = { "OXYGEN", "THUNDER", "STORM", "NORTHERN LIGHTS", "GREAT BARRIER REEF" };
         static readonly List<string> WordsList = new List<string>(Words);
 
         static Random randWord = new Random();
